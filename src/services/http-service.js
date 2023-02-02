@@ -7,6 +7,13 @@ export class HttpService {
     this.baseApi = `${API_PATH}${controllerName && '/'}${controllerName}`;
   }
 
+  get baseHeaders() {
+    return {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer!!${TokenService.getToken()}`
+    }
+  }
+
   async get(path = '') {
     const response = await fetch(`${this.baseApi}/${path}`, {
       headers: this.baseHeaders

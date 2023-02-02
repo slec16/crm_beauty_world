@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import mastersApi from "../../../api/masters-api";
-
-import { useInput} from '../../../hooxs';
+import { useInput } from '../../../hooks';
 
 export function MasterForm({ master }) {
     const surName = useInput('');

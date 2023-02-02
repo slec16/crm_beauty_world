@@ -3,7 +3,6 @@ import { useAuth } from "../../contexts/AuthContext";
 import AuthForm from "./AuthForm";
 
 export function LoginPage() {
-    
     const { isAuth, login } = useAuth();
 
     if (isAuth) {
