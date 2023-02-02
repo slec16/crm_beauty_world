@@ -1,5 +1,5 @@
 import { API_PATH } from '../constants';
-import TokenService from '../services/token-service';
+import TokenService from './token-service';
 import pubsubService from './pubsub-service';
 
 export class HttpService {
@@ -10,7 +10,7 @@ export class HttpService {
   get baseHeaders() {
     return {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer!!${TokenService.getToken()}`
+      'Authorization': `Bearer ${TokenService.getToken()}`
     }
   }
 

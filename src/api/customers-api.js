@@ -2,7 +2,7 @@ import { HttpService } from '../services/http-service';
 
 class CustomersApi extends HttpService {
   constructor() {
-    super('customers');
+    super('orders');
   }
 
   getCustomers(search = '') {

@@ -7,7 +7,6 @@ import { AuthProvider } from './contexts/AuthContext';
 
 ReactDOM.render((
     <BrowserRouter>
-        <App />
         <AuthProvider>
             <App />
         </AuthProvider>
